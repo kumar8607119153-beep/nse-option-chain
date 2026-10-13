@@ -1126,6 +1126,28 @@ if True:
 
     st.header("👑 OWNER API")
 
+    # ============================================================
+# STREAMLIT CLOUD PUBLIC IP STATUS
+# ============================================================
+
+st.subheader("🌐 STREAMLIT CLOUD PUBLIC IP")
+
+try:
+    _ip_response = requests.get(
+        "https://api.ipify.org",
+        timeout=5
+    )
+    _ip_response.raise_for_status()
+
+    STREAMLIT_PUBLIC_IP = _ip_response.text.strip()
+
+    st.code(STREAMLIT_PUBLIC_IP)
+    st.caption("ऊपर Streamlit Cloud सर्वर का बाहर दिखाई देने वाला Public IP है।")
+
+except Exception:
+    STREAMLIT_PUBLIC_IP = None
+    st.warning("⚠️ Streamlit Cloud का Public IP पता नहीं चल सका।")
+
     # Credentials are loaded automatically from environment / GitHub Secrets
     # ============================================================
     # OWNER API CREDENTIALS (SECURE FETCH)
