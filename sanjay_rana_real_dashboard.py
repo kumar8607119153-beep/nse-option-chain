@@ -4779,7 +4779,7 @@ def _run_account_engine(account_id, account_api, account_qty_btc, render_output)
   }
   .tf-btn.active { background:#2962ff; color:#fff; }
   #chart-wrapper { position:relative; width:100%; }
-  #chart { width:100%; height:600px; }
+  #chart { width:100%; height:1200px; }
   #status { margin-top:8px; font-size:12px; color:#787b86; }
   #live-pnl-badge { display:none; position:absolute; left:8px; z-index:5;
     pointer-events:none; font-family:Arial,sans-serif; }
